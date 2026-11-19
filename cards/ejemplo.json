@@ -1,0 +1,126 @@
+{
+  "cover": {
+    "tagline": "Una etapa termina…",
+    "closing": "¡Te esperamos!",
+    "tapHint": "Toca para abrir",
+    "showLogo": true
+  },
+  "promo": {
+    "label": "PROMOCIÓN",
+    "year": "2026",
+    "motto": "",
+    "school": "Complejo Educativo Cantón Guadalupe La Zorra",
+    "message": "Cerramos una etapa llena de recuerdos y abrimos las puertas a nuevos sueños"
+  },
+  "invite": {
+    "intro": "Con mucha alegría, te invitamos a celebrar un momento inolvidable: nuestra graduación",
+    "eventTitle": "Ceremonia de Graduación",
+    "dateISO": "2026-11-27T14:30",
+    "venue": "Complejo Educativo Cantón Guadalupe La Zorra",
+    "mapUrl": "",
+    "closingQuote": "Los grandes sueños comienzan con pequeños pasos"
+  },
+  "theme": {
+    "preset": "navy-gold",
+    "primary": "#0B1B3F",
+    "accent": "#C9A24B",
+    "paper": "#FFFFFF",
+    "paperOpacity": 1
+  },
+  "thanks": {
+    "enabled": true,
+    "title": "Nuestros agradecimientos especiales a:",
+    "names": [
+      "Jeovanny Pérez",
+      "Katherine Mejía",
+      "Nohemy Mejía",
+      "Alexander Flores"
+    ]
+  },
+  "graduate": {
+    "name": ""
+  },
+  "rsvp": {
+    "whatsapp": "",
+    "message": "¡Confirmo mi asistencia!"
+  },
+  "music": {
+    "enabled": false,
+    "src": ""
+  },
+  "footerBrand": {
+    "enabled": false,
+    "text": "PROMOCIÓN 2026"
+  },
+  "timing": {
+    "autoAdvance": true,
+    "curtain": 1.6,
+    "page2At": 13.5,
+    "inviteStay": 9.5,
+    "agendaStay": 7,
+    "rosterStay": 8.5,
+    "sweepAfter": 2,
+    "thanksStay": 7
+  },
+  "agenda": {
+    "enabled": true,
+    "title": "Agenda",
+    "colTime": "Hora",
+    "colActivity": "Actividad",
+    "items": [
+      {
+        "time": "01:45 PM",
+        "activity": "Punto de reunión"
+      },
+      {
+        "time": "02:30 PM",
+        "activity": "Culto de Acción de Gracias"
+      },
+      {
+        "time": "03:30 PM",
+        "activity": "Ceremonia de Graduación"
+      },
+      {
+        "time": "04:45 PM",
+        "activity": "Cierre y sesión fotográfica"
+      },
+      {
+        "time": "05:00 PM",
+        "activity": "Recepción"
+      }
+    ]
+  },
+  "roster": {
+    "enabled": true,
+    "title": "Nuestra promoción",
+    "names": [
+      "AMAYA RIVERA, BRYAN EDENILSON",
+      "AVENDAÑO BONILLA, WILSON ISAAC",
+      "AYALA AGUILAR, CHERLIN VANESA",
+      "BARAHONA LAÍNEZ, FRANCISCO ALBERTO",
+      "BONILLA BONILLA, ÁNGEL RICARDO",
+      "CAMPOS MENDOZA, DANIEL ALONSO",
+      "CARRERO ORELLANA, SAID JOSSUÉ",
+      "CUATRO FLORES, ANDERSON GEOVANY",
+      "DÍAZ DÍAZ, CARLOS MAURICIO",
+      "DURÁN VILLACORTA, VLADIMIR ADONAY",
+      "ESCOBAR BELTRÁN, JOEL ANTONIO",
+      "FLORES CRUZ, JEFERSON ADONAY",
+      "FLORES RIVERA, ALISON BEATRIZ",
+      "GONZÁLEZ MENDOZA, JACOBO ESAÚ",
+      "GRANDE RODRÍGUEZ, CELESTE MARGARITA",
+      "HURTADO ARGUETA, LUCIA EUNICE",
+      "LÓPEZ GÓMEZ, JOSÉ DANIEL",
+      "LÓPEZ PONCE, FRANCISCO ELÍAS",
+      "LOZANO MEJÍA, JOSÉ LUIS",
+      "MARAVILLA MENDOZA, NOÉ ISAAC",
+      "MENDOZA FLORES, ANIBAL OSWALDO",
+      "MENDOZA OSORIO, MÓNICA ELIZABETH",
+      "MOLINA FLORES, ROSA MAILY",
+      "ORELLANA AVENDAÑO, CÉSAR ARMANDO",
+      "ORELLANA VILLACORTA, JOSÉ MAURICIO",
+      "PALACIOS RAMÍREZ, RAMÓN ANTONIO",
+      "VELÁSQUEZ RODRÍGUEZ, ANA MARÍA"
+    ]
+  }
+}
