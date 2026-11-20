@@ -33,5 +33,5 @@ body { background: #0a0f1f; -webkit-tap-highlight-color: transparent; overscroll
 .dots { position: absolute; right: 2.4cqw; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 2.2cqw; z-index: 10; }
 .dots span { width: 1.8cqw; height: 1.8cqw; border-radius: 50%; border: 1px solid var(--gold-500); transition: background .3s; }
 .music { position: absolute; right: 3cqw; top: 3cqw; z-index: 30; width: 44px; height: 44px; border-radius: 50%;
-  border: 1px solid var(--gold-500); background: rgba(11,27,63,.55); color: var(--gold-300); font-size: 20px; cursor: pointer; }
+  border: 1px solid var(--gold-500); background: rgba(11,27,63,.55); color: var(--gold-300); cursor: pointer; display: grid; place-items: center; }
 @media (prefers-reduced-motion: reduce) { .scroller { scroll-behavior: auto; } }

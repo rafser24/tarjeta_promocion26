@@ -96,7 +96,7 @@ export const DEFAULT_CONFIG: CardConfig = {
   },
   graduate: { name: '' },
   rsvp: { whatsapp: '', message: '¡Confirmo mi asistencia!' },
-  music: { enabled: false, src: '' },
+  music: { enabled: true, src: '/musica.mp3' },
   footerBrand: { enabled: false, text: 'PROMOCIÓN 2026' },
   timing: { autoAdvance: true, curtain: 1.6, page2At: 13.5, inviteStay: 9.5, agendaStay: 7, rosterStay: 8.5, thanksStay: 7, sweepAfter: 2 },
 }

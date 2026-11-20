@@ -45,8 +45,8 @@
     "message": "¡Confirmo mi asistencia!"
   },
   "music": {
-    "enabled": false,
-    "src": ""
+    "enabled": true,
+    "src": "/musica.mp3"
   },
   "footerBrand": {
     "enabled": false,

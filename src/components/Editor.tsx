@@ -267,7 +267,7 @@ export function Editor() {
           {text('WhatsApp para confirmar (con código de país)', (c) => c.rsvp.whatsapp, (c, v) => (c.rsvp.whatsapp = v), 20)}
           {text('Mensaje de confirmación', (c) => c.rsvp.message, (c, v) => (c.rsvp.message = v), 140)}
           {text('Enlace de Google Maps', (c) => c.invite.mapUrl, (c, v) => (c.invite.mapUrl = v), 500)}
-          {text('URL de música (mp3, https)', (c) => c.music.src, (c, v) => (c.music.src = v), 500)}
+          {text('Música (ruta o URL del mp3; por defecto /musica.mp3)', (c) => c.music.src, (c, v) => (c.music.src = v), 500)}
           <label className="flex items-center gap-2 text-sm">
             <input type="checkbox" checked={config.music.enabled} onChange={(e) => update((c) => (c.music.enabled = e.target.checked))} />
             Reproducir música al abrir
