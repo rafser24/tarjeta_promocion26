@@ -399,6 +399,11 @@ const btn: CSSProperties = {
 }
 
 /* ============ Personalizar y enviar (cada alumno genera su enlace) ============ */
+/** Suma 1 al contador de envíos (solo el dueño ve el total en /contador). Si falla, no pasa nada. */
+function countShare() {
+  try { void fetch('/api/share', { method: 'POST', keepalive: true }).catch(() => {}) } catch { /* sin contador */ }
+}
+
 function SendSheet({ c, onClose }: { c: CardConfig; onClose: () => void }) {
   const [name, setName] = useState('')
   const [copied, setCopied] = useState(false)
@@ -411,7 +416,7 @@ function SendSheet({ c, onClose }: { c: CardConfig; onClose: () => void }) {
   }
   const message = () => `Hola ${clean} 🎓\n${c.invite.intro}.\nAbre tu invitación 👇\n${link()}`
   const copy = async () => {
-    try { await navigator.clipboard.writeText(link()); setCopied(true); setTimeout(() => setCopied(false), 1800) } catch { /* copiar manualmente */ }
+    try { await navigator.clipboard.writeText(link()); countShare(); setCopied(true); setTimeout(() => setCopied(false), 1800) } catch { /* copiar manualmente */ }
   }
   const primary: CSSProperties = { ...btn, background: 'var(--gold-500)', color: 'var(--navy)', borderColor: 'var(--gold-500)', fontWeight: 600 }
   return (
@@ -431,7 +436,7 @@ function SendSheet({ c, onClose }: { c: CardConfig; onClose: () => void }) {
           borderRadius: 10, border: '1px solid var(--gold-500)', background: 'rgba(255,255,255,.08)', color: '#fff', outline: 'none' }} />
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2.4cqw', alignItems: 'center' }}>
         {clean ? (
-          <a style={primary} target="_blank" rel="noopener noreferrer" href={`https://wa.me/?text=${encodeURIComponent(message())}`}>ENVIAR POR WHATSAPP</a>
+          <a style={primary} target="_blank" rel="noopener noreferrer" onClick={countShare} href={`https://wa.me/?text=${encodeURIComponent(message())}`}>ENVIAR POR WHATSAPP</a>
         ) : (
           <span style={{ ...primary, opacity: 0.4 }} aria-disabled>ENVIAR POR WHATSAPP</span>
         )}

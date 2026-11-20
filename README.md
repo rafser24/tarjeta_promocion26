@@ -33,3 +33,15 @@ Toca la portada (o desliza a la izquierda) para abrir. Las páginas avanzan sola
    Para forzar que WhatsApp actualice una vista previa en caché, agrega `?v=2` al enlace.
 2. **Enlace limpio:** los valores de `DEFAULT_CONFIG` (`src/lib/config.ts`) se publican tal cual; comparte solo la raíz (`https://tu-dominio.com`). Cuando el contenido esté definitivo, copia ahí los cambios del editor.
 3. **Enlace por invitado:** `https://tu-dominio.com/?para=Familia%20Pérez` muestra "Para: Familia Pérez" en la portada. En `/#/editar` → "Enlaces personalizados por invitado" pegas la lista y generas cada enlace con su botón de WhatsApp.
+
+## Contador de envíos (solo para el dueño)
+
+Cada vez que alguien pulsa **Enviar por WhatsApp** o **Copiar enlace** en "Personalizar y enviar", la tarjeta llama a `/api/share` (POST) y suma 1.
+El total se ve en `https://TU-SITIO/contador` escribiendo la clave (variable `STATS_KEY`). La tarjeta no muestra el número a nadie.
+
+Configuración en Vercel (gratis):
+1. Proyecto → **Storage** → **Create Database** → **Upstash Redis** (plan Free) → conéctala al proyecto.
+2. **Settings → Environment Variables**: agrega `STATS_KEY` con una clave larga que solo tú conozcas.
+3. **Redeploy**.
+
+Sin base de datos conectada la tarjeta funciona igual; solo no cuenta.

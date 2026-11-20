@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Contador de envíos</title>
+<style>
+  body { margin: 0; min-height: 100dvh; display: grid; place-items: center; background: #0B1B3F; color: #fff; font-family: Georgia, serif; text-align: center; padding: 24px; box-sizing: border-box; }
+  main { width: min(360px, 100%); }
+  h1 { font-weight: 400; font-size: 22px; color: #E3C77F; margin: 0 0 18px; }
+  input, button { font: inherit; font-size: 18px; padding: 12px 14px; border-radius: 10px; border: 1px solid #C9A24B; width: 100%; box-sizing: border-box; }
+  input { background: rgba(255,255,255,.08); color: #fff; text-align: center; margin-bottom: 12px; }
+  button { background: #C9A24B; color: #0B1B3F; font-weight: 600; cursor: pointer; }
+  #n { font-size: 84px; line-height: 1; margin: 26px 0 4px; color: #fff; }
+  #msg { min-height: 1.4em; color: #E3C77F; font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Veces que se ha enviado la invitación</h1>
+  <form id="f">
+    <input id="k" type="password" placeholder="Tu clave" autocomplete="current-password" required />
+    <button type="submit">Ver total</button>
+  </form>
+  <div id="n" aria-live="polite"></div>
+  <div id="msg"></div>
+</main>
+<script>
+  var f = document.getElementById('f'), n = document.getElementById('n'), msg = document.getElementById('msg')
+  f.addEventListener('submit', function (e) {
+    e.preventDefault()
+    n.textContent = ''; msg.textContent = 'Consultando…'
+    fetch('/api/share?key=' + encodeURIComponent(document.getElementById('k').value), { cache: 'no-store' })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j } }) })
+      .then(function (x) {
+        if (x.ok) { n.textContent = x.j.count; msg.textContent = x.j.count === 1 ? 'envío' : 'envíos' }
+        else msg.textContent = x.j.error || 'No se pudo consultar'
+      })
+      .catch(function () { msg.textContent = 'No se pudo conectar' })
+  })
+</script>
+</body>
+</html>
