@@ -92,7 +92,7 @@ export const DEFAULT_CONFIG: CardConfig = {
   },
   thanks: {
     enabled: true, title: 'Nuestros agradecimientos especiales a:',
-    names: ['Jeovanny Pérez', 'Katherine Mejía', 'Nohemy Mejía', 'Alexander Flores'],
+    names: ['Jeovanny Pérez', 'Katherine Mejía', 'Nohemy Mejía', 'Alexander Flores', 'Yensi Flores'],
   },
   graduate: { name: '' },
   rsvp: { whatsapp: '', message: '¡Confirmo mi asistencia!' },
